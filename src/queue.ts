@@ -19,14 +19,14 @@ export function queue(options?: QueueTaskOptions): MethodDecorator {
             // const params = getMetadata(target, `${keyName}Params`);
             // const contextParam = getMetadata(target, `${keyName}Context`);
             // const metaParam = getMetadata(target, `${keyName}Meta`);
-            const process = descriptor.value;
+            // const process = descriptor.value;
 
             // if (params) {
             //     opts.params = params;
             // }
 
             queues[propertyKey] = {
-                process,
+                process: descriptor.value,
                 ...opts,
             };
             setMetadata(target, "queues", queues);
