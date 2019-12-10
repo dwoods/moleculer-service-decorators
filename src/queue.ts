@@ -25,10 +25,11 @@ export function queue(options?: QueueTaskOptions): MethodDecorator {
             //     opts.params = params;
             // }
 
-            queues[propertyKey] = {
-                process: descriptor.value,
-                ...opts,
-            };
+            queues[propertyKey] = descriptor.value;
+            // {
+            //     process: descriptor.value,
+            //     ...opts,
+            // };
             setMetadata(target, "queues", queues);
             // removeMetadata(target, `${keyName}Params`);
 
