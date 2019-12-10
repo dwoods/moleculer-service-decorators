@@ -12,7 +12,7 @@ export declare function getClassMetadata(constructor: ServiceConstructor): Parti
 /**
  * These options should be set in the class itself instead of the options
  */
-export declare type ServiceOptionsToExclude = "actions" | "events" | "methods" | "created" | "started" | "stopped";
+export declare type ServiceOptionsToExclude = "actions" | "events" | "queues" | "methods" | "created" | "started" | "stopped";
 export declare type ServiceOptions = Partial<Pick<ServiceSchema, Exclude<keyof ServiceSchema, ServiceOptionsToExclude>>>;
 export interface ServiceConstructor {
     new (...args: any[]): Service;

@@ -44,6 +44,7 @@ export function getClassMetadata(constructor: ServiceConstructor): Partial<Servi
  */
 export type ServiceOptionsToExclude = "actions" |
                                       "events" |
+                                      "queues" |
                                       "methods" |
                                       "created" |
                                       "started" |
@@ -63,6 +64,11 @@ export type ServiceDecorator = <T extends ServiceConstructor>(constructor: T) =>
  */
 export function service(options: ServiceOptions = {}): ServiceDecorator {
     return <T extends ServiceConstructor>(constructor: T) => {
+        console.log(typeof constructor);
+        console.log(Service.isPrototypeOf(constructor));
+        console.log(Service.prototype);
+        console.log(constructor.prototype);
+        console.log(constructor);
         if (isServiceClass(constructor)) {
             // TODO: Filter options to remove actions, events, etc..
             let schema: ServiceSchema = {

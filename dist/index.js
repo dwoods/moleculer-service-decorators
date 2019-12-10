@@ -8,3 +8,4 @@ __export(require("./constants"));
 __export(require("./event"));
 __export(require("./param"));
 __export(require("./service"));
+__export(require("./queue"));

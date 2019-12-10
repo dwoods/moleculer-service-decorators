@@ -22,10 +22,11 @@
   "license": "MIT",
   "devDependencies": {
     "@types/bluebird": "^3.5.23",
+    "@types/bull": "^3.10.6",
     "@types/jest": "^24.0.6",
     "@types/node": "^9.6.26",
     "jest": "^24.1.0",
-    "moleculer": "^0.13.1",
+    "moleculer": ">=0.14.0-beta6",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.2",
     "tslint": "^5.13.0",
@@ -56,7 +57,7 @@
     "reflect-metadata": "^0.1.13"
   },
   "peerDependencies": {
-    "moleculer": ">=0.12.1"
+    "moleculer": ">=0.14.0-beta6"
   },
   "types": "./dist/index.d.ts",
   "files": [

@@ -3,3 +3,4 @@ export * from "./constants";
 export * from "./event";
 export * from "./param";
 export * from "./service";
+export * from "./queue";

@@ -35,6 +35,11 @@ exports.getClassMetadata = getClassMetadata;
  */
 function service(options = {}) {
     return (constructor) => {
+        console.log(typeof constructor);
+        console.log(moleculer_1.Service.isPrototypeOf(constructor));
+        console.log(moleculer_1.Service.prototype);
+        console.log(constructor.prototype);
+        console.log(constructor);
         if (isServiceClass(constructor)) {
             // TODO: Filter options to remove actions, events, etc..
             let schema = Object.assign({}, options, { name: options.name || constructor.name });
